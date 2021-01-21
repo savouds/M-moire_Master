@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#"
+     xml:base="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#affecte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#affecte"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#cible -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#cible"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#conduit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#conduit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#dispose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#dispose"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#effectue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#effectue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#estExploitéePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#estExploitéePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#exploite"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#estgarantiePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#estgarantiePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#garantie"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#estprotègéePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#estprotègéePar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#protège"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Contremesures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#exploite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#exploite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#garantie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#garantie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#initie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#initie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#produit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#produit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#protège -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#protège">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Contremesures"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#reduit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#reduit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#utilise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#utilise"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#but -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#but">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#nom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Contremesures"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Couches"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaquant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaquant">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#effectue"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#initie"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#affecte"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#cible"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#utilise"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mouvement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Batterie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Batterie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Clé_cryptage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Clé_cryptage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Token"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Composantes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Composantes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Contremesures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Contremesures">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#reduit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Couches -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Couches">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mouvement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Donnée -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Donnée">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#conduit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#produit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mouvement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Hardware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#ID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#ID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Token"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Microprocesseur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Microprocesseur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mouvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mouvement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mémoire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Mémoire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Protocole_MAC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Protocole_MAC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Protocole_Routage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Protocole_Routage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Protocole_Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Protocole_Transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#dispose"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Radio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Radio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ressources"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Software">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Token -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Token">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Analyse_Trafic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Analyse_Trafic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Informations_Sensible"/>
+        <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analyse du trafic</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Analyseur_Réseau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Analyseur_Réseau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+        <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireshark</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Antenne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Antenne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Appareil_sans_fil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Appareil_sans_fil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+        <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinateur</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaquant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaquant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaquant"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Analyse_Trafic"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ecoute_Réseau"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Extraction_Informations_Noeud_Capturé"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Interception_Transmission"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Reinitialisation_Noeud"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Remise_Noeud_Dans_le_Réseau"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Reprogrammation_Noeud_Capturé"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Rétrait_Physique_Noeud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Authentification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Authentification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Clé_Cryptographique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Clé_Cryptographique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Code_executé_par_Noeud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Code_executé_par_Noeud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <affecte rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Confidentialité"/>
+        <cible rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Signal_Légitime"/>
+        <exploite rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Communication_sans_fil"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Analyseur_Réseau"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Antenne"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Physique"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Récepteur"/>
+        <but rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Récuperation des informations sur la cible</but>
+        <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collecte des Informations</nom>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Passive</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Communication_sans_fil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Communication_sans_fil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+        <estExploitéePar rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Confidentialité -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Confidentialité">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Disponibilité -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Disponibilité">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ecoute_Réseau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ecoute_Réseau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Informations_Sensible"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Emetteur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Emetteur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Environnement_Ouvert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Environnement_Ouvert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Vulnérabilités"/>
+        <estExploitéePar rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Extraction_Informations_Noeud_Capturé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Extraction_Informations_Noeud_Capturé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Clé_Cryptographique"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Code_executé_par_Noeud"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Fabrication_aléatoire_Identifiant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Fabrication_aléatoire_Identifiant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Sybil"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Sybil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <affecte rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Disponibilité"/>
+        <affecte rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Intégrité"/>
+        <cible rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Légitime"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations"/>
+        <exploite rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Environnement_Ouvert"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Malveillant"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ordinateur"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Physique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Identifiant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Identifiant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Informations_Sensible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Informations_Sensible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+        <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ID, Frequence, Type de capteurs, Localisation...</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Interception_Transmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Interception_Transmission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Collecte_Informations"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Informations_Sensible"/>
+        <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interception des transmissions</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Intégrité -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Intégrité">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Objectifs_Sécurité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Légitime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Légitime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Malveillant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Malveillant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaquant"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Fabrication_aléatoire_Identifiant"/>
+        <effectue rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#vol_des_identifiants"/>
+        <initie rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Sybil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Sybil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Sybil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Resultat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ordinateur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Ordinateur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Physique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Physique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Couches"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#RCSF"/>
+        <dispose rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Signal_Légitime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Reinitialisation_Noeud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Reinitialisation_Noeud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Malveillant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Remise_Noeud_Dans_le_Réseau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Remise_Noeud_Dans_le_Réseau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Reprogrammation_Noeud_Capturé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Reprogrammation_Noeud_Capturé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Récepteur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Récepteur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Equipements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Réseau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Réseau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Couches"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Rétrait_Physique_Noeud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Rétrait_Physique_Noeud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Falsification_Noeud"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Signal_Légitime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Signal_Légitime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Communication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Sybil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Sybil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Attaque"/>
+        <affecte rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Authentification"/>
+        <affecte rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Disponibilité"/>
+        <cible rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Identifiant"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Malveillant"/>
+        <utilise rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Réseau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#vol_des_identifiants -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#vol_des_identifiants">
+        <rdf:type rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Démarche"/>
+        <conduit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Sybil"/>
+        <produit rdf:resource="http://www.semanticweb.org/savoudsoubenjamin/ontologies/2020/10/Ontologie_attaque#Noeud_Sybil"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
